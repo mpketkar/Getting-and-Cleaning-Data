@@ -276,14 +276,21 @@ dtTidy[, .N, by = c(names(dtTidy)[grep("^feat", names(dtTidy))])]
 ```
 
 
-Save to file
-------------
-
-Save data table objects to a tab-delimited text file called `DatasetHumanActivityRecognitionUsingSmartphones.txt`.
-
-
-```r
-f <- file.path(path, "DatasetHumanActivityRecognitionUsingSmartphones.txt")
-write.table(dtTidy, f, quote = FALSE, sep = "\t", row.names = FALSE)
-```
+Steps taken
+----------------
+* If required install the packages; "data.table" and "reshape2".  
+* Load: activity labels  
+* Load: data column names  
+* Extract only the measurements on the mean and standard deviation for each measurement.  
+* Load and process X_test & y_test data.  
+* Extract only the measurements on the mean and standard deviation for each measurement.  
+* Load activity labels  
+* Bind data  
+* Load and process X_train & y_train data.  
+* Extract only the measurements on the mean and standard deviation for each measurement.  
+* Load activity data  
+* Bind data  
+* Merge test and train data  
+* Apply mean function to dataset using dcast function  
+* Write the tidy dataset.  
 
