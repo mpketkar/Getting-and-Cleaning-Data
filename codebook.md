@@ -1,6 +1,25 @@
 Codebook
 ========
 
+Steps taken
+----------------
+* If required install the packages; "data.table" and "reshape2".  
+* Load: activity labels  
+* Load: data column names  
+* Extract only the measurements on the mean and standard deviation for each measurement.  
+* Load and process X_test & y_test data.  
+* Extract only the measurements on the mean and standard deviation for each measurement.  
+* Load activity labels  
+* Bind data  
+* Load and process X_train & y_train data.  
+* Extract only the measurements on the mean and standard deviation for each measurement.  
+* Load activity data  
+* Bind data  
+* Merge test and train data  
+* Apply mean function to dataset using dcast function  
+* Write the tidy dataset.  
+
+
 Variable list and descriptions
 ------------------------------
 
@@ -274,23 +293,3 @@ dtTidy[, .N, by = c(names(dtTidy)[grep("^feat", names(dtTidy))])]
 ## 66:           SD       NA 180
 ##     featVariable featAxis   N
 ```
-
-
-Steps taken
-----------------
-* If required install the packages; "data.table" and "reshape2".  
-* Load: activity labels  
-* Load: data column names  
-* Extract only the measurements on the mean and standard deviation for each measurement.  
-* Load and process X_test & y_test data.  
-* Extract only the measurements on the mean and standard deviation for each measurement.  
-* Load activity labels  
-* Bind data  
-* Load and process X_train & y_train data.  
-* Extract only the measurements on the mean and standard deviation for each measurement.  
-* Load activity data  
-* Bind data  
-* Merge test and train data  
-* Apply mean function to dataset using dcast function  
-* Write the tidy dataset.  
-
