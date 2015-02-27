@@ -14,8 +14,8 @@ if (!require("reshape2")) {
 }
 
 require("data.table")
-require("reshape2")
-
+require("reshape2")  
+---  
 * Load: activity labels  
 * Load: data column names  
 * Extract only the measurements on the mean and standard deviation for each measurement.  
