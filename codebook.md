@@ -3,7 +3,7 @@ Codebook
 
 Steps taken
 ----------------
-* If required install the packages; "data.table" and "reshape2".
+#If required install the packages; "data.table" and "reshape2".#
 
 if (!require("data.table")) {
   install.packages("data.table")
